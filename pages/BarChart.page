@@ -1,0 +1,10 @@
+<apex:page controller="ChartController">
+    <apex:chart height="400" width="400" data="{!months}">
+        <apex:axis type="Numeric" position="left" fields="count"
+                title="Record Count" minimum="0"/>
+        <apex:axis type="Category" position="bottom" fields="yearMonth"
+                title="Year/Month"/>
+        <apex:barSeries orientation="vertical" axis="left"
+                xField="yearMonth" yField="count,count1"/>
+    </apex:chart>
+</apex:page>
