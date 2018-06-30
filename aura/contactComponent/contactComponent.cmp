@@ -1,0 +1,81 @@
+<aura:component >
+    
+    <aura:attribute name="contactRecordWrapper" type="array"/>
+    <aura:attribute name="index" type="Integer"/>
+    <aura:attribute name="openPopUp" type="boolean" default="false"/>
+    <aura:attribute name="emailRecordsDelete" type="List"/>
+    
+    <aura:handler event="c:EmailChildRecordsList" action="{!c.handleSubmitEmailRecordsList}"/>
+    <aura:registerEvent name="getContactRecordToRemove" type="c:GetIndex"/>
+    
+    <table class="slds-table slds-table--cell-buffer"> 
+        <thead>
+            <tr>
+                <th scope="col" style="">
+                    <div class="slds-truncate" title="Remove">
+                        <a href="javascript:void(0);" onclick="{!c.handleRemoveContact}">Remove</a>
+                    </div>
+                </th>
+                <th scope="col" style="">
+                    <div class="slds-truncate" title="FirstName">First Name</div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title="LastName" style="color:#16325c;">Last Name<span style="color:red">* </span></div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title="Language" style="color:#16325c;">Employee ID<span style="color:red">* </span></div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title="Phone" style="color:#16325c;">Phone</div>
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                </td>
+                <td scope="col">
+                    <div>                
+                        <ui:inputText aura:id="contactFirstName"
+                                      class="slds-input "
+                                      labelClass="slds-form-element__label"
+                                      value="{!v.contactRecordWrapper.contactRecord.FirstName}"/>	
+                    </div> 
+                </td>
+                <td scope="col">
+                    <div>                
+                        <ui:inputText aura:id="contactLastName"
+                                      class="slds-input "
+                                      labelClass="slds-form-element__label"
+                                      value="{!v.contactRecordWrapper.contactRecord.LastName}"/>	
+                    </div>
+                </td>
+                <td scope="col">
+                    <div >                
+                        <ui:inputText aura:id="contactLanguage"
+                                      class="slds-input "
+                                      labelClass="slds-form-element__label"
+                                      value="{!v.contactRecordWrapper.contactRecord.Employee_ID__c}"/>	
+                    </div>
+                </td>
+                <td scope="col">
+                    <div>                
+                        <ui:inputText aura:id="contactPhone"
+                                      class="slds-input "
+                                      labelClass="slds-form-element__label"
+                                      value="{!v.contactRecordWrapper.contactRecord.Phone}"/>	
+                    </div>
+                </td>
+                <td scope="col">
+                    <div class="slds-form-element" >
+                        <button class="slds-button slds-button--neutral" onclick="{!c.showEmailDetails}">Email Details</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <lightning:overlayLibrary aura:id="popupCompId"/>
+    
+</aura:component>

@@ -1,0 +1,22 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:appHostable,force:lightningQuickAction">
+    <aura:attribute name="startDate" type="Date" />
+    <aura:attribute name="endDate" type="Date" />
+    <div class="container" >
+        <div class="slds-col slds-p-horizontal--medium">
+            <label class="slds-form-element__label" for="email">Start Date : </label>
+            <ui:inputDate aura:id="startDateField" value="{!v.startDate}" displayDatePicker="true"/>
+        </div>  
+    </div>
+    <div class="demo-only demo-only--sizing slds-grid slds-wrap">        
+        <div class="slds-size_1-of-2">
+            <div class="slds-text-align_center slds-m-around_x-large">
+                <ui:inputDate aura:id="startDateField" label="Start Date" value="{!v.startDate}" displayDatePicker="true"/>
+            </div>
+        </div>
+        <div class="slds-size_1-of-2">
+            <div class="slds-text-align_center slds-m-around_x-large">
+                <ui:inputDate aura:id="endDateField" label="End Date" value="{!v.endDate}" displayDatePicker="true"/>
+            </div>
+        </div>
+    </div> 
+</aura:component>

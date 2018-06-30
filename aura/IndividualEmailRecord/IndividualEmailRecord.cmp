@@ -1,0 +1,31 @@
+<aura:component >
+    
+    <aura:attribute name="IndividualRec" type="Array"/>
+    <aura:attribute name="index" type="integer"/>
+    
+    <aura:registerEvent name="getEmailRecordToRemove" type="c:GetIndex"/>
+    
+    <tr>
+        <td scope="col">
+            <a href="javascript:void(0);" onclick="{!c.handleRemoveEmail}">Remove</a>
+        </td>
+        <td scope="col">
+            <div class="slds-size_2-of-2">                
+                <ui:inputText aura:id="Email" 
+                              label=""
+                              class="slds-input"
+                              labelClass="slds-form-element__label"
+                              value="{!v.IndividualRec.Email__c}"/> 	
+            </div>
+        </td>
+        <td scope="col">
+            <div>
+                <ui:inputText aura:id="EmailType" 
+                              label=""
+                              class="slds-input"
+                              labelClass="slds-form-element__label"
+                              value="{!v.IndividualRec.Email_Type__c}"/> 
+            </div>
+        </td>
+    </tr>  
+</aura:component>

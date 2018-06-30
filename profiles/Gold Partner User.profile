@@ -1,4 +1,60 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Profile xmlns="http://soap.sforce.com/2006/04/metadata"><custom>false</custom><userLicense>Gold Partner</userLicense><fieldPermissions>
+<?xml version="1.0" encoding="utf-8"?><Profile xmlns="http://soap.sforce.com/2006/04/metadata"><custom>false</custom><userLicense>Gold Partner</userLicense><applicationVisibilities>
+        <application>standard__AppLauncher</application>
+        <default>false</default>
+        <visible>true</visible>
+    </applicationVisibilities><applicationVisibilities>
+        <application>standard__Chatter</application>
+        <default>false</default>
+        <visible>true</visible>
+    </applicationVisibilities><applicationVisibilities>
+        <application>standard__Community</application>
+        <default>false</default>
+        <visible>true</visible>
+    </applicationVisibilities><applicationVisibilities>
+        <application>standard__Content</application>
+        <default>false</default>
+        <visible>true</visible>
+    </applicationVisibilities><applicationVisibilities>
+        <application>standard__LightningInstrumentation</application>
+        <default>false</default>
+        <visible>true</visible>
+    </applicationVisibilities><applicationVisibilities>
+        <application>standard__LightningSales</application>
+        <default>false</default>
+        <visible>true</visible>
+    </applicationVisibilities><applicationVisibilities>
+        <application>standard__LightningSalesConsole</application>
+        <default>false</default>
+        <visible>true</visible>
+    </applicationVisibilities><applicationVisibilities>
+        <application>standard__LightningService</application>
+        <default>false</default>
+        <visible>true</visible>
+    </applicationVisibilities><applicationVisibilities>
+        <application>standard__Marketing</application>
+        <default>false</default>
+        <visible>true</visible>
+    </applicationVisibilities><applicationVisibilities>
+        <application>standard__Platform</application>
+        <default>false</default>
+        <visible>false</visible>
+    </applicationVisibilities><applicationVisibilities>
+        <application>standard__Sales</application>
+        <default>true</default>
+        <visible>true</visible>
+    </applicationVisibilities><applicationVisibilities>
+        <application>standard__Service</application>
+        <default>false</default>
+        <visible>true</visible>
+    </applicationVisibilities><applicationVisibilities>
+        <application>standard__ServiceConsole</application>
+        <default>false</default>
+        <visible>false</visible>
+    </applicationVisibilities><applicationVisibilities>
+        <application>standard__Sites</application>
+        <default>false</default>
+        <visible>true</visible>
+    </applicationVisibilities><fieldPermissions xmlns="http://soap.sforce.com/2006/04/metadata">
         <editable>true</editable>
         <field>Account.AccountNumber</field>
         <readable>true</readable>
@@ -894,7 +950,87 @@
         <editable>true</editable>
         <field>Task.WhoId</field>
         <readable>true</readable>
-    </fieldPermissions><recordTypeVisibilities>
+    </fieldPermissions><layoutAssignments>
+        <layout>Account-Account Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>Asset-Asset Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>AssetRelationship-Asset Relationship Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>Campaign-Campaign Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>CampaignMember-Campaign Member Page Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>Case-Case Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>CaseClose-Close Case Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>Contact-Contact Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>Contact_Email__c-Contact Email Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>ContentVersion-Content Version Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>Contract-Contract Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>DandBCompany-D%26B Company Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>DuplicateRecordSet-Duplicate Record Set Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>EmailMessage-Email Message Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>Event-Event Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>FeedItem-Feed Item Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>Global-Global Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>Idea-Idea Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>Lead-Lead Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>Macro-Macro Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>Opportunity-Opportunity Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>OpportunityLineItem-Opportunity Product Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>Order-Order Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>OrderItem-Order Product Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>Pricebook2-Price Book Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>PricebookEntry-Price Book Entry Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>Product2-Product Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>QuickText-Quick Text Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>Scorecard-Scorecard Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>ScorecardAssociation-Scorecard Association Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>ScorecardMetric-Scorecard Metric Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>SocialPersona-Social Persona Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>Solution-Solution Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>Task-Task Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>Test1__c-Test1 Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>Test__c-Test Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>User-User Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>UserProvAccount-User Provisioning Account Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>UserProvisioningLog-User Provisioning Log Layout</layout>
+    </layoutAssignments><layoutAssignments>
+        <layout>UserProvisioningRequest-User Provisioning Request Layout</layout>
+    </layoutAssignments><recordTypeVisibilities>
         <default>false</default>
         <recordType>Idea.InternalIdeasIdeaRecordType</recordType>
         <visible>false</visible>
@@ -993,4 +1129,34 @@
     </tabVisibilities><tabVisibilities>
         <tab>standard-UserProvisioningRequest</tab>
         <visibility>Hidden</visibility>
+    </tabVisibilities><tabVisibilities>
+        <tab>Align</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities><tabVisibilities>
+        <tab>BlogRelease</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities><tabVisibilities>
+        <tab>DataService</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities><tabVisibilities>
+        <tab>Scroll_Load</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities><tabVisibilities>
+        <tab>Test</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities><tabVisibilities>
+        <tab>Test1__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities><tabVisibilities>
+        <tab>Test_App</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities><tabVisibilities>
+        <tab>Test__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities><tabVisibilities>
+        <tab>Trial2</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities><tabVisibilities>
+        <tab>TrialComp</tab>
+        <visibility>DefaultOn</visibility>
     </tabVisibilities></Profile>
