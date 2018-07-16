@@ -54,7 +54,7 @@
         <application>standard__Sites</application>
         <default>false</default>
         <visible>true</visible>
-    </applicationVisibilities><fieldPermissions xmlns="http://soap.sforce.com/2006/04/metadata">
+    </applicationVisibilities><fieldPermissions>
         <editable>true</editable>
         <field>Account.AccountNumber</field>
         <readable>true</readable>
@@ -1186,5 +1186,8 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities><tabVisibilities>
         <tab>TrialComp</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities><tabVisibilities>
+        <tab>Pagination</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities></Profile>

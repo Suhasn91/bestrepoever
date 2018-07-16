@@ -43,6 +43,9 @@
     </classAccesses><classAccesses>
         <apexClass>myHandler</apexClass>
         <enabled>true</enabled>
+    </classAccesses><classAccesses>
+        <apexClass>pagination</apexClass>
+        <enabled>true</enabled>
     </classAccesses><pageAccesses>
         <apexPage>BarChart</apexPage>
         <enabled>true</enabled>
@@ -1240,5 +1243,8 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities><tabVisibilities>
         <tab>TrialComp</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities><tabVisibilities>
+        <tab>Pagination</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities></Profile>
