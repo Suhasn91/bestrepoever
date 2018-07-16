@@ -154,6 +154,9 @@
             </componentInstanceProperties>
             <componentName>flexipage:tabset</componentName>
         </componentInstances>
+        <componentInstances>
+            <componentName>LayoutComp</componentName>
+        </componentInstances>
         <mode>Replace</mode>
         <name>sidebar</name>
         <type>Region</type>
