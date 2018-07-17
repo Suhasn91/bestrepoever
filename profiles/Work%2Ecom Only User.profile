@@ -1178,4 +1178,7 @@
     </tabVisibilities><tabVisibilities>
         <tab>Pagination</tab>
         <visibility>Hidden</visibility>
+    </tabVisibilities><tabVisibilities>
+        <tab>Guide</tab>
+        <visibility>Hidden</visibility>
     </tabVisibilities></Profile>

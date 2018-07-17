@@ -1,0 +1,12 @@
+<aura:component implements="force:appHostable">
+    <aura:attribute name="simpleRecord" type="Account"/>
+    <force:recordData aura:id="forceRecordCmp"
+        recordId="0017F00000fitkLQAQ"
+        layoutType="{!v.layout}"
+        fields="['Name']"
+        mode="VIEW"
+        targetRecord="{!v.record}"
+        targetFields="{!v.simpleRecord}"
+        targetError="{!v.error}" />
+    <force:inputfield value="{!v.simpleRecord.name}"/>
+</aura:component>
