@@ -46,6 +46,9 @@
     </classAccesses><classAccesses>
         <apexClass>pagination</apexClass>
         <enabled>true</enabled>
+    </classAccesses><classAccesses>
+        <apexClass>MetadataService</apexClass>
+        <enabled>true</enabled>
     </classAccesses><pageAccesses>
         <apexPage>BarChart</apexPage>
         <enabled>true</enabled>
