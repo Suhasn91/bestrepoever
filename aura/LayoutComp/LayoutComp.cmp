@@ -6,8 +6,9 @@
     
     <aura:attribute name="next" type="boolean" />
     <aura:attribute name="prev" type="boolean" />
-    
-    <div class="wk_static">
-        Testing Component....Testing Component....Testing Component....Testing Component....Testing Component....Testing Component....Testing Component....Testing Component....
-    </div>
+    <lightning:card title="Card Header" iconName="standard:account" footer="Card Footer">
+        <p class="slds-p-horizontal_small">
+            Card Body
+        </p>
+    </lightning:card>
 </aura:component>
