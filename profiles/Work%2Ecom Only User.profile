@@ -1181,4 +1181,7 @@
     </tabVisibilities><tabVisibilities>
         <tab>Guide</tab>
         <visibility>Hidden</visibility>
+    </tabVisibilities><tabVisibilities>
+        <tab>Send_Email</tab>
+        <visibility>Hidden</visibility>
     </tabVisibilities></Profile>
