@@ -1184,4 +1184,7 @@
     </tabVisibilities><tabVisibilities>
         <tab>Send_Email</tab>
         <visibility>Hidden</visibility>
+    </tabVisibilities><tabVisibilities>
+        <tab>Classis_Mail</tab>
+        <visibility>Hidden</visibility>
     </tabVisibilities></Profile>

@@ -52,6 +52,9 @@
     </classAccesses><classAccesses>
         <apexClass>EmailSendController</apexClass>
         <enabled>true</enabled>
+    </classAccesses><classAccesses>
+        <apexClass>ContactController</apexClass>
+        <enabled>true</enabled>
     </classAccesses><pageAccesses>
         <apexPage>BarChart</apexPage>
         <enabled>true</enabled>
@@ -1258,5 +1261,8 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities><tabVisibilities>
         <tab>Send_Email</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities><tabVisibilities>
+        <tab>Classis_Mail</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities></Profile>
