@@ -8,7 +8,7 @@
             if (state === "SUCCESS") {
                 var urlEvent = $A.get("e.force:navigateToURL");
                 urlEvent.setParams({
-                    "url": "https://suhasnlightning-dev-ed.my.salesforce.com/_ui/core/email/author/EmailAuthor?p2_lkid="+component.get("v.recordId")+"&&p24=sumanthn95@gmail.com&&retURL="+component.get("v.recordId")
+                    "url": "https://suhasnlightning-dev-ed.my.salesforce.com/_ui/core/email/author/EmailAuthor?p2_lkid="+component.get("v.recordId")+"&&p24="+response.getReturnValue()+"&&retURL="+component.get("v.recordId")
                 });
                 urlEvent.fire();
             }

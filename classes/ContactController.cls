@@ -5,7 +5,7 @@ public class ContactController
     {
         List<Contact> contactList = [select id, Email from Contact where Id =: recordId];
         if(contactList.size() > 0)
-            return contactList[0].Id;
+            return contactList[0].Email;
         else
             return 'No Record';
     }
