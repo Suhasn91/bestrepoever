@@ -64,6 +64,9 @@
     </pageAccesses><pageAccesses>
         <apexPage>Testing</apexPage>
         <enabled>true</enabled>
+    </pageAccesses><pageAccesses>
+        <apexPage>Detail_Button_Test</apexPage>
+        <enabled>true</enabled>
     </pageAccesses><applicationVisibilities>
         <application>standard__AppLauncher</application>
         <default>false</default>
