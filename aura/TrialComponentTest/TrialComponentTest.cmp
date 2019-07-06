@@ -1,0 +1,44 @@
+<aura:component implements="force:appHostable">
+    <aura:attribute name="account" type="Account"/>
+    <aura:attribute name="accountRecord" type="Account" default="{ 'sobjectType': 'Account'}"/>
+    <aura:attribute name="accountError" type="String"/>
+    <aura:attribute name="mycolumns" type="List"/>
+    <aura:attribute name="contact" type="Contact" default="{ 'sobjectType': 'Contact' , 'firstName' : 'Suhas', 'lastName' : 'N'}"/>
+    <aura:attribute name="mydata" type="Contact[]"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    
+    <lightning:card iconName="action:new_account" title="Create Account">
+        <div class="slds-p-horizontal--small">
+            <lightning:layout horizontalAlign="space">
+                <lightning:layoutItem flexibility="auto" padding="around-small" size='6'>
+                    Name : <force:inputField value="{!v.accountRecord.Name}"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-small" size='6'>
+                    Phone : <force:inputField value="{!v.accountRecord.Phone}"/>
+                </lightning:layoutItem>
+            </lightning:layout>
+            
+            <lightning:layout horizontalAlign="space">
+                <lightning:layoutItem flexibility="auto" padding="around-small" size='6'>
+                    Contact LookUp : <force:inputField value="{!v.accountRecord.Contact_LookUp__c}"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-small" size='6'>
+                    Current Approval level :<force:inputField value="{!v.accountRecord.Current_Approval_level__c}"/>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <br/>
+            <lightning:button label="Save Account" variant="brand" onclick="{!c.handleSaveContact}"/>
+        </div>
+    </lightning:card>
+    <lightning:accordion activeSectionName="B">
+        <lightning:accordionSection name="A" label="Contacts">
+            <lightning:datatable columns="{! v.mycolumns }"
+                                 data="{! v.mydata }"
+                                 keyField="id"
+                                 onrowaction="{! c.handleRowAction }"/>
+        </lightning:accordionSection>
+    </lightning:accordion>
+    <lightning:button label="Add Contact" variant="brand" onclick="{!c.createContact}"/>
+    <lightning:overlayLibrary aura:id="popuplib"/>
+</aura:component>

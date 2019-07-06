@@ -20,7 +20,7 @@ public class HttpCalloutMailChimp
         
         JSONGenerator gen = JSON.createGenerator(true);
         gen.writeStartObject();
-            gen.writeStringField('name', 'List Testing New');
+            gen.writeStringField('name', 'List Testing from Salesforce');
             gen.writeFieldName('contact');
             gen.writeStartObject();
                 gen.writeStringField('company', 'MailChimp');

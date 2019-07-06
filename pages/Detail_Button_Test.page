@@ -1,0 +1,6 @@
+<apex:page StandardController="Account" sidebar="false" showheader="true">
+        <apex:messages />
+        <apex:form >
+        please confirm...
+        </apex:form>
+</apex:page>

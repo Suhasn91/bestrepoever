@@ -1,0 +1,34 @@
+<aura:component >
+    
+    <aura:attribute name="isOpen" type="boolean" default="false"/>
+    <aura:attribute name="EmailRecordWrapper" type="array"/>
+    <aura:attribute name="emailRecordsDelete" type="List" default="[]"/>
+    <aura:attribute name="index" type="Integer"/>
+    
+    <lightning:overlayLibrary aura:id="popUpCompId"/>
+    
+    <aura:registerEvent name="submittedEmailRecordsList" type="c:EmailChildRecordsList"/>
+    <aura:handler name="getEmailRecordToRemove" event="c:GetIndex" action="{!c.handleRemoveEmailDetails}"/>
+    
+    <table class="slds-table slds-table--cell-buffer">    
+        <tr>
+            <th></th>
+            <th scope="col">
+                <div class="slds-truncate" title="Stage1" style="color:#16325c;">Contact Email</div>
+            </th>      
+            <th scope="col"> 
+                <div class="slds-truncate" title="Stage2" style="color:#16325c;">Email Type</div>
+            </th>
+        </tr>
+        <aura:iteration items="{!v.EmailRecordWrapper}" var="individualEmailObject" indexVar="index" >
+            <c:IndividualEmailRecord IndividualRec="{!individualEmailObject}" index="{!index}"/>
+        </aura:iteration>
+    </table>
+    <div class="slds-form-element" >
+        <button class="slds-button slds-button--neutral" onclick="{!c.addEmail}">Add Email</button>
+    </div>
+    <div class="slds-modal__footer">
+        <button class="slds-button slds-button--brand" onclick="{!c.submitClose}">Submit and Close</button>
+    </div>
+    
+</aura:component>

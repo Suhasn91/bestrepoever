@@ -1,0 +1,14 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes">
+    
+    <aura:attribute name="accounts" type="Account[]"/>
+    
+    <aura:attribute name="offset" type="integer" />
+    
+    <aura:attribute name="next" type="boolean" />
+    <aura:attribute name="prev" type="boolean" />
+    <lightning:card title="Card Header" iconName="standard:account" footer="Card Footer">
+        <p class="slds-p-horizontal_small">
+            Card Body
+        </p>
+    </lightning:card>
+</aura:component>

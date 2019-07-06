@@ -1,0 +1,67 @@
+<aura:component implements="force:appHostable" controller="ListViewController">
+    
+    <aura:attribute name="accountdata" type="Object"/>
+    <aura:attribute name="accountcolumns" type="List"/>
+    
+    <aura:attribute name="enableInfiniteLoading" type="Boolean" default="true"/>
+    <aura:attribute name="currentCount" type="Integer" default="0"/>
+    <aura:attribute name="initialRows" type="Integer" default="14"/>
+    <aura:attribute name="rowsToLoad" type="Integer" default="14"/>
+    <aura:attribute name="totalNumberOfRows" type="Integer" default="300"/>
+    <aura:attribute name="loadMoreStatus" type="String" default=""/>
+    
+    <aura:attribute name="contactdata" type="Object"/>
+    <aura:attribute name="contactcolumns" type="List"/>
+    
+    <aura:attribute name="contactenableInfiniteLoading" type="Boolean" default="true"/>
+    <aura:attribute name="contactcurrentCount" type="Integer" default="0"/>
+    <aura:attribute name="contactinitialRows" type="Integer" default="50"/>
+    <aura:attribute name="contactrowsToLoad" type="Integer" default="20"/>
+    <aura:attribute name="contacttotalNumberOfRows" type="Integer" default="300"/>
+    <aura:attribute name="contactloadMoreStatus" type="String" default=""/>
+    
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+    <aura:handler event="c:ApplicationEvent" action="{!c.handleApplicationEvent}"/>
+    
+    <lightning:overlayLibrary aura:id="popuplib"/>
+    
+    <lightning:tabset >
+        <lightning:tab label="Accounts">
+            <lightning:card title="Accounts" iconName="standard:account" footer="{! v.loadMoreStatus }">
+                <aura:set attribute="actions">
+                    <lightning:button label="New" onclick="{!c.createAccount}"/>
+                </aura:set>
+                <div class="Tableheight slds-p-horizontal_small">
+                    <lightning:datatable data="{! v.accountdata }" 
+                                         columns="{! v.accountcolumns }" 
+                                         keyField="id"
+                                         hideCheckboxColumn="true"
+                                         onrowaction="{! c.handleRowAction }"
+                                         enableInfiniteLoading="{!v.enableInfiniteLoading}"
+                                         onloadmore="{! c.loadMoreData }"
+                                         showRowNumberColumn="true"/>
+                </div>
+                
+            </lightning:card>
+        </lightning:tab>
+        <lightning:tab label="Contacts">
+            <lightning:card title="Contacts" iconName="standard:contact" footer="{! v.contactloadMoreStatus }">
+                <aura:set attribute="actions">
+                    <lightning:button label="New" onclick="{!c.createContact}"/>
+                </aura:set>
+                <div class="Tableheight slds-p-horizontal_small">
+                    <lightning:datatable data="{! v.contactdata }" 
+                                         columns="{! v.contactcolumns }" 
+                                         keyField="id"
+                                         hideCheckboxColumn="true"
+                                         onrowaction="{! c.contacthandleRowAction }"
+                                         enableInfiniteLoading="{!v.contactenableInfiniteLoading}"
+                                         onloadmore="{! c.contactloadMoreData }"/>
+                </div>
+                
+            </lightning:card>
+        </lightning:tab>
+    </lightning:tabset>
+    
+    
+</aura:component>

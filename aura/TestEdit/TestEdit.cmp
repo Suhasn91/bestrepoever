@@ -1,0 +1,12 @@
+<aura:component implements="force:appHostable" >
+    <lightning:recordEditForm recordId="{!v.recID}" objectApiName="Account" onsuccess="{!c.accountsuccess}" onerror="{!c.errors}">
+        <lightning:messages />
+        <lightning:inputField fieldName="Name" />
+        <lightning:inputField fieldName="Phone" />
+        <lightning:inputField fieldName="Type" />
+        <lightning:inputField fieldName="Industry" />
+        
+        <lightning:button class="slds-m-top_small slds-m-left_small floatright" variant="brand" type="submit" name="Save" label="Save" />
+        <lightning:button class="slds-m-top_small floatright" type="button" name="Cancel" label="Cancel" onclick="{!c.close}"/>
+    </lightning:recordEditForm>	
+</aura:component>

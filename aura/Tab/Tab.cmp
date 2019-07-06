@@ -1,0 +1,6 @@
+<aura:component >
+    <lightning:tabset variant="scoped">
+        <lightning:tab onactive="{! c.handleActive }" label="Accounts" id="accounts" />
+        <lightning:tab onactive="{! c.handleActive }" label="Cases" id="cases" />
+    </lightning:tabset>
+</aura:component>
